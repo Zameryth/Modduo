@@ -1,90 +1,90 @@
 var bg, min, hour, sec;
 
 function one() {
-  bg = "0x000000";
-  min = "0xFFFFFF";
-  hour = "0xFF55AA";
-  sec = "0x00AAFF";
+  bg = "000000";
+  min = "FFFFFF";
+  hour = "FF00AA";
+  sec = "00AAFF";
 
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
 }
 
 function two() {
-  bg = "0x000000";
-  min = "0xFFFFFF";
-  hour = "0xFF0055";
-  sec = "0x00AAFF";
+  bg = "000000";
+  min = "FFFFFF";
+  hour = "00AAFF";
+  sec = "FF5500";
 
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
 }
 
 function three() {
-  bg = "0x000000";
-  min = "0xFFFFFF";
-  hour = "0xFF0055";
-  sec = "0x00AAFF";
+  bg = "000000";
+  min = "FFFFFF";
+  hour = "FFAA00";
+  sec = "FF0055";
 
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
 }
 
 function four() {
-  bg = "0x000000";
-  min = "0xFFFFFF";
-  hour = "0xFF0055";
-  sec = "0x00AAFF";
+  bg = "550000";
+  min = "FFFFFF";
+  hour = "FFAA00";
+  sec = "00FFFF";
 
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
 }
 
 function five() {
-  bg = "0x000000";
-  min = "0xFFFFFF";
-  hour = "0xFF0055";
-  sec = "0x00AAFF";
+  bg = "AA0000";
+  min = "FFAA00";
+  hour = "00FFFF";
+  sec = "FFFFFF";
 
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
 }
 
 function six() {
-  bg = "0x000000";
-  min = "0xFFFFFF";
-  hour = "0xFF0055";
-  sec = "0x00AAFF";
+  bg = "FF5500";
+  min = "00FFFF";
+  hour = "FFFFFF";
+  sec = "FFAA00";
 
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
 }
 
 function seven() {
-  bg = "0x000000";
-  min = "0xFFFFFF";
-  hour = "0xFF0055";
-  sec = "0x00AAFF";
+  bg = "AA00AA";
+  min = "FFFFFF";
+  hour = "FF5555";
+  sec = "00FFFF";
 
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
 }
 
 function eight() {
-  bg = "0x000000";
-  min = "0xFFFFFF";
-  hour = "0xFF0055";
-  sec = "0x00AAFF";
+  bg = "555500";
+  min = "FFFFFF";
+  hour = "AAAA55";
+  sec = "FFAA00";
 
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
 }
 
 function nine() {
-  bg = "0x000000";
-  min = "0xFFFFFF";
-  hour = "0xFF0055";
-  sec = "0x00AAFF";
+  bg = "00AAFF";
+  min = "FFFFFF";
+  hour = "FF0055";
+  sec = "000000";
 
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
