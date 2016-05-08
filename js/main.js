@@ -1,9 +1,9 @@
 var bg, min, hour, sec;
 
 function one() {
-  bg = "0xFFFF00";
-  min = "0x55FF00";
-  hour = "0xFF0055";
+  bg = "0x000000";
+  min = "0xFFFFFF";
+  hour = "0xFF55AA";
   sec = "0x00AAFF";
 
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
@@ -19,8 +19,6 @@ function two() {
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
 }
-
-
 
 function getAndStoreConfigData() {
   var options = {
