@@ -11,8 +11,78 @@ function one() {
 }
 
 function two() {
-  bg = "0xFFFF00";
-  min = "0x55FF00";
+  bg = "0x000000";
+  min = "0xFFFFFF";
+  hour = "0xFF0055";
+  sec = "0x00AAFF";
+
+  var return_to = getQueryParam('return_to', 'pebblejs://close#');
+  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+}
+
+function three() {
+  bg = "0x000000";
+  min = "0xFFFFFF";
+  hour = "0xFF0055";
+  sec = "0x00AAFF";
+
+  var return_to = getQueryParam('return_to', 'pebblejs://close#');
+  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+}
+
+function four() {
+  bg = "0x000000";
+  min = "0xFFFFFF";
+  hour = "0xFF0055";
+  sec = "0x00AAFF";
+
+  var return_to = getQueryParam('return_to', 'pebblejs://close#');
+  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+}
+
+function five() {
+  bg = "0x000000";
+  min = "0xFFFFFF";
+  hour = "0xFF0055";
+  sec = "0x00AAFF";
+
+  var return_to = getQueryParam('return_to', 'pebblejs://close#');
+  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+}
+
+function six() {
+  bg = "0x000000";
+  min = "0xFFFFFF";
+  hour = "0xFF0055";
+  sec = "0x00AAFF";
+
+  var return_to = getQueryParam('return_to', 'pebblejs://close#');
+  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+}
+
+function seven() {
+  bg = "0x000000";
+  min = "0xFFFFFF";
+  hour = "0xFF0055";
+  sec = "0x00AAFF";
+
+  var return_to = getQueryParam('return_to', 'pebblejs://close#');
+  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+}
+
+function eight() {
+  bg = "0x000000";
+  min = "0xFFFFFF";
+  hour = "0xFF0055";
+  sec = "0x00AAFF";
+
+  var return_to = getQueryParam('return_to', 'pebblejs://close#');
+  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+}
+
+function nine() {
+  bg = "0x000000";
+  min = "0xFFFFFF";
   hour = "0xFF0055";
   sec = "0x00AAFF";
 
