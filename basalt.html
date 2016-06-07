@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class='item-container'>
-    <h1 class='title'>TTTMMD<br>CONFIGURATION</h1>
+    <h1 class='title'>Modduo</h1>
   </div>
 
   <div class="item-container">
@@ -45,48 +45,29 @@
   </div>
 
 
-    <div class='item-container'>
-      <div class='item-container-header'>COLOR PRESET</div>
-        <div class='item-container-content'>
-
-            <label class='item' style="width: auto;overflow-x: scroll;overflow-y:hidden;white-space:nowrap;">
-              <a onclick="one();"><img src="images/PT/1.png"></a>
-              <a onclick="two();"><img src="images/PT/2.png"></a>
-              <a onclick="three();"><img src="images/PT/3.png"></a>
-              <a onclick="four();"><img src="images/PT/4.png"></a>
-              <a onclick="five();"><img src="images/PT/5.png"></a>
-              <a onclick="six();"><img src="images/PT/6.png"></a>
-              <a onclick="seven();"><img src="images/PT/7.png"></a>
-              <a onclick="eight();"><img src="images/PT/8.png"></a>
-              <a onclick="nine();"><img src="images/PT/9.png"></a>
-            </label>
-
-    </div>
-
-          <div class='item-container'>
-            <div class='button-container'>
-              <input id='submitButton' type='button' class='item-button' value='SUBMIT'>
+            <div class='item-container'>
+              <div class='button-container'>
+                <input id='submitButton' type='button' class='item-button' value='Show/hide' onclick="toggle_visibility('hideMe')">
+              </div>
             </div>
-          </div>
-
-<br>
-
-    <div class='item-container'>
-      <div class='item-container-header'>MORE TTMM WATCHFACES</div>
-        <div class='item-container-content' align='center'>
-          <a href="https://play.google.com/store/apps/details?id=eu.ttmm.pebble.time"><img src="images/googlePlay.png"></a>
-          <a href="https://itunes.apple.com/us/app/ttmm-for-pebble-time/id1007137383"><img src="images/appStore.png"></a>
-    </div>
 
 
+<div id="hideMe">I want to hide this by pressing the button above</div>
+<p>Hello Testing padding
+</p>
 
-  </div>
+<input id='submitButton' type='button' class='item-button' value='SUBMIT'>
 
-<br>
-<br>
 
   <script src='js/slate.min.js'></script>
   <script src='js/main.js'></script>
+  <script>
+  function toggle_visibility(id) {
+      var e = document.getElementById(id);
+      if (e.style.display == 'block' || e.style.display=='') e.style.display = 'none';
+      else e.style.display = 'block';
+  }</script>
+
 
 </body>
 </html>
