@@ -1,102 +1,144 @@
-var bg, min, hour, sec;
+var bg="000000", date="55FF00", time="FFFFFF";
+
+(function() {
+  loadOptions();
+  submitHandler();
+})();
+
+function submitHandler() {
+  var $submitButton = $('#submitButton');
+
+  $submitButton.on('click', function() {
+    console.log('Submit');
+
+    var return_to = getQueryParam('return_to', 'pebblejs://close#');
+    document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+  });
+}
+
+function loadOptions() {
+  var Celsius = document.getElementById('Cel');
+  var Fahrenheit = document.getElementById('Fah')
+  var Europe = document.getElementById('EUF')
+  var UnitedStates = document.getElementById('USF')
+  var Steps = document.getElementById('STE')
+
+  if (window.localStorage.cel && window.localStorage.fah && window.localStorage.euf && window.localStorage.usf &&
+    window.localStorage.ste && window.localStorage.bg && window.localStorage.date && window.localStorage.time) {
+    Celsius.checked = JSON.parse(window.localStorage.cel);
+    Fahrenheit.checked = JSON.parse(window.localStorage.fah);
+    Europe.checked = JSON.parse(window.localStorage.euf);
+    UnitedStates.checked = JSON.parse(window.localStorage.usf);
+    Steps.checked = JSON.parse(window.localStorage.ste);
+    bg = window.localStorage.bg;
+    date = window.localStorage.date;
+    time = window.localStorage.time;
+  }
+}
 
 function one() {
   bg = "000000";
-  min = "FFFFFF";
-  hour = "FF00AA";
-  sec = "00AAFF";
-
-  var return_to = getQueryParam('return_to', 'pebblejs://close#');
-  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+  date = "00FFFF";
+  time = "FFFFFF";
 }
 
 function two() {
   bg = "000000";
-  min = "FFFFFF";
-  hour = "00AAFF";
-  sec = "FF5500";
-
-  var return_to = getQueryParam('return_to', 'pebblejs://close#');
-  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+  date = "55FF00";
+  time = "FFFFFF";
 }
 
 function three() {
   bg = "000000";
-  min = "FFFFFF";
-  hour = "FFAA00";
-  sec = "FF0055";
-
-  var return_to = getQueryParam('return_to', 'pebblejs://close#');
-  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+  date = "FF5555";
+  time = "FFFFFF";
 }
 
 function four() {
   bg = "550000";
-  min = "FFFFFF";
-  hour = "FFAA00";
-  sec = "00FFFF";
-
-  var return_to = getQueryParam('return_to', 'pebblejs://close#');
-  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+  date = "FFAA00";
+  time = "FFFFFF";
 }
 
 function five() {
   bg = "AA0000";
-  min = "FFAA00";
-  hour = "00FFFF";
-  sec = "FFFFFF";
-
-  var return_to = getQueryParam('return_to', 'pebblejs://close#');
-  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+  date = "FFAA00";
+  time = "FFFFFF";
 }
 
 function six() {
-  bg = "FF5500";
-  min = "00FFFF";
-  hour = "FFFFFF";
-  sec = "FFAA00";
-
-  var return_to = getQueryParam('return_to', 'pebblejs://close#');
-  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+  bg = "AA0055";
+  date = "FFAA00";
+  time = "FFFFFF";
 }
 
 function seven() {
-  bg = "AA00AA";
-  min = "FFFFFF";
-  hour = "FF5555";
-  sec = "00FFFF";
-
-  var return_to = getQueryParam('return_to', 'pebblejs://close#');
-  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+  bg = "0000AA";
+  date = "00FFFF";
+  time = "FFFFFF";
 }
 
 function eight() {
-  bg = "555500";
-  min = "FFFFFF";
-  hour = "AAAA55";
-  sec = "FFAA00";
-
-  var return_to = getQueryParam('return_to', 'pebblejs://close#');
-  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+  bg = "005555";
+  date = "00FFFF";
+  time = "FFFFFF";
 }
 
 function nine() {
-  bg = "00AAFF";
-  min = "FFFFFF";
-  hour = "FF0055";
-  sec = "000000";
-
-  var return_to = getQueryParam('return_to', 'pebblejs://close#');
-  document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
+  bg = "00AAAA";
+  date = "000000";
+  time = "FFFFFF";
 }
 
+function twoPTR() {
+  bg = "550000";
+  date = "00FFFF";
+  time = "FFFFFF";
+}
+
+function fourPTR() {
+  bg = "AA00AA";
+  date = "00FFFF";
+  time = "FFFFFF";
+}
+
+function fivePTR() {
+  bg = "5500AA";
+  date = "55FF00";
+  time = "FFFFFF";
+}
+
+
 function getAndStoreConfigData() {
+  var $temperature_unit_radio_c = $('#Cel');
+  var $temperature_unit_radio_f = $('#Fah');
+
+  var $temp = document.querySelector('input[name="radio-1"]:checked').value;
+  var $format = document.querySelector('input[name="radio-2"]:checked').value;
+
+  var Celsius = document.getElementById('Cel');
+  var Fahrenheit = document.getElementById('Fah')
+  var Europe = document.getElementById('EUF')
+  var UnitedStates = document.getElementById('USF')
+  var Steps = document.getElementById('STE')
+
   var options = {
+    temperatureUnitC: $temperature_unit_radio_c[0].checked,
+    temperatureUnitF: $temperature_unit_radio_f[0].checked,
     bg: bg,
-    min: min,
-    hour: hour,
-    sec: sec,
+    date: date,
+    time: time,
+    format: $format,
   };
+
+  window.localStorage.cel = Celsius.checked;
+  window.localStorage.fah = Fahrenheit.checked;
+  window.localStorage.euf = Europe.checked;
+  window.localStorage.usf = UnitedStates.checked;
+  window.localStorage.ste = Steps.checked;
+  window.localStorage.bg = bg;
+  window.localStorage.date = date;
+  window.localStorage.time = time;
 
   console.log('Got options: ' + JSON.stringify(options));
   return options;

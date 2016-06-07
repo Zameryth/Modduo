@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel='stylesheet' type='text/css' href='css/slate.min.css'>
+  <link rel='stylesheet' type='text/css' href='css/style.css'>
+
+</head>
+<body>
+  <div class='item-container'>
+    <h1 class='title'>TTTMMD<br>CONFIGURATION</h1>
+  </div>
+
+  <div class="item-container">
+    <div class="item-container-header">TEMPERATURE</div>
+    <div class="item-container-content">
+      <label class="item">
+        Celsius
+        <input type="radio" class="item-radio" id="Cel" name="radio-1" value="Celsius" checked>
+      </label>
+      <label class="item">
+        Fahrenheit
+        <input type="radio" class="item-radio" id="Fah" name="radio-1" value="Fahrenheit">
+      </label>
+    </div>
+  </div>
+
+  <div class="item-container">
+    <div class="item-container-header">DATE or STEPS</div>
+    <div class="item-container-content">
+      <label class="item">
+        DD.MM (EU Format)
+        <input type="radio" class="item-radio" id="EUF" name="radio-2" value="0" checked>
+      </label>
+      <label class="item">
+        MM.DD (US Format)
+        <input type="radio" class="item-radio" id="USF" name="radio-2" value="1">
+      </label>
+      <label class="item">
+        STEPS
+        <input type="radio" class="item-radio" id="STE"name="radio-2" value="2">
+      </label>
+    </div>
+  </div>
+
+
+    <div class='item-container'>
+      <div class='item-container-header'>COLOR PRESET</div>
+        <div class='item-container-content'>
+
+            <label class='item' style="width: auto;overflow-x: scroll;overflow-y:hidden;white-space:nowrap;">
+              <a onclick="one();"><img src="images/PT/1.png"></a>
+              <a onclick="two();"><img src="images/PT/2.png"></a>
+              <a onclick="three();"><img src="images/PT/3.png"></a>
+              <a onclick="four();"><img src="images/PT/4.png"></a>
+              <a onclick="five();"><img src="images/PT/5.png"></a>
+              <a onclick="six();"><img src="images/PT/6.png"></a>
+              <a onclick="seven();"><img src="images/PT/7.png"></a>
+              <a onclick="eight();"><img src="images/PT/8.png"></a>
+              <a onclick="nine();"><img src="images/PT/9.png"></a>
+            </label>
+
+    </div>
+
+          <div class='item-container'>
+            <div class='button-container'>
+              <input id='submitButton' type='button' class='item-button' value='SUBMIT'>
+            </div>
+          </div>
+
+<br>
+
+    <div class='item-container'>
+      <div class='item-container-header'>MORE TTMM WATCHFACES</div>
+        <div class='item-container-content' align='center'>
+          <a href="https://play.google.com/store/apps/details?id=eu.ttmm.pebble.time"><img src="images/googlePlay.png"></a>
+          <a href="https://itunes.apple.com/us/app/ttmm-for-pebble-time/id1007137383"><img src="images/appStore.png"></a>
+    </div>
+
+
+
+  </div>
+
+<br>
+<br>
+
+  <script src='js/slate.min.js'></script>
+  <script src='js/main.js'></script>
+
+</body>
+</html>
