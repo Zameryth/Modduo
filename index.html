@@ -44,8 +44,7 @@ function Toggle(elementId)
 <td width="100%" valign="top">
 <p align="center">Hi there! Welcome to Modular, the next generation watchface for Pebble. With a watchface like this, you're bound to have questions
 regarding functions. This is an information guide to help answer most of them. It is formatted exactly the way it is in the configuration page so you
-can understand what each function does line by line aside from the obvious ones. While I would love to individually reply to everyone,
-I would rather use that time to program new features or requests that you guys submitted. If you have a question that was not answered here, feel free
+can understand what each function does line by line aside from the obvious ones. If you have a question that was not answered here, feel free
 to contact me using the "Contact Developer" option on the watchface settings in the Pebble App.</p>
 
 
@@ -58,18 +57,24 @@ The font themes allow you to personalize Modular. Feeling techy? Use Digital. Fe
 Digital is slightly wider, so certain modules that have a text input will be limited in character count. The Digital theme is also a custom font, meaning that only A-Z
 and some symbols are allows in text inputs. For the Smooth font theme, it utilizes the system font and is slimmer allowing for more characters to be shown and more symbols to use. Same goes
 for Hybrid. </br></br>
-The date format is only used for the date text information.</br></br>
+The date format is used for the date text information and Travel module (to show the date for an upcoming flight)</br></br>
 BT Vibration stands for Bluetooth Vibration. If toggled on, it will vibrate one time when the bluetooth connection with your cellphone is disconnected. When this occurs,
 the top text information is replaced with the text, "BT Off" which stands for Bluetooth Offline. After reconnecting, it will automatically revert back to your top text choice.
-I know that this sacrifices one line of information for users while they're disconnected and I'm currently looking to find a better solution without obtrusion.
-If you have an idea, feel free to contact me.
+For a future update, the indicator you will be able to toggle the indicator.
+</br></br>
+Peek Mode is a new feature in Modular. It allows you to "peek" at another set of modules you selected with a flick of your wrist. This provides a way for you to use up to 4 modules compared to the regular 2.
+No more compromising with which one to choose! After turning this switch on, you may select the peek modules under the respective top and bottom module sections.
+</br></br>
+Master Key allows you to store your API Keys for weather, My Habits, Travel etc and retrieve them hassle free. No more copying and pasting the API key for each API you want to use.
+After entering your email and PIN, press the button to automatically grab the API for each section. If the retrieval was successful, a "Success" message should pop up on the button.
+You will only need to do this once unless you reinstall Modular. To learn more about Master Key, go to pmkey.xyz
 </div></fieldset></br>
 
 <fieldset style="border:1px solid white; width:auto;"><legend><font size="4"><b>Text</b></font></legend>
 <div id="text" align = "center">
 Text informations are a way to show basic information like battery life or steps. It was designed to give you flexibility alongside modules to
 choose which information is important towards your preferences. For example, a Pebble Time user is less likely to care about battery percentage compared
-to a Pebble Time Round user. Currently there are only 4 options: Date, Steps, Temperature, and Battery Level, but there are more planned for a future update.
+to a Pebble Time Round user. Currently there are only 5 options: Date, Steps, Temperature, Battery Level, and Day of the Week but there are more planned for a future update.
 </div></fieldset></br>
 
 <fieldset style="border:1px solid white; width:auto;"><legend><font size="4"><b>Modules</b></font></legend>
@@ -84,11 +89,17 @@ track of your steps for the week and encourage yourself to do better each day. T
 you have traveled. The unit is automatically selected based on your preferred format in the Pebble App settings. It will show feet and miles for imperial and meter and kilometers
 for metric. It automatically adjusts itself from low units to larger units. The calories includes both your active and inactive calories. This information is updated every 10 minutes. </br></br>
 
+<b>Sleep Graph</b></br>
+Similar to the Step Graph, the Sleep Graph shows your sleep and deep sleep for the previous night and 6 days before that. The graph is divided into two sections, the smaller one being your
+deep sleep and the large one being the total sleep you had.
+</br></br>
+
 <b>Calendar</b></br>
-The calendar shows the days of the week on the first line, current week, on the second line, and the following week on the third line. It is a dynamic
-calendar meaning that it automatically adjusts to show the last 3 days and the next 10 days. This causes it to center the current day in the middle.
-I was also planning to have a static option which shows the traditional calendar format but it did not make it in time for release. This will
-be added for a future update.</br></br>
+The calendar shows the days of the week on the first line, current week, on the second line, and the following week on the third line. It's been updated to include
+both a static and dynamic type. The static calendar is your traditional calendar from starting with Sunday to Saturday. The dynamic
+calendar automatically adjusts to show the last 3 days and the next 10 days. This causes it to center the current day in the middle.
+Your current day is bordered with the primary color you chose.
+</br></br>
 
 <b>Weather</b></br>
 The weather module is full of information. The units are dependent on the option you have chose in the configuration page.
@@ -124,6 +135,14 @@ In order to use My Habits for Modular, you must have an API token. This can only
 find your token in the user settings of the app and on the bottom of the page. If there is no token, you can press "Regenerate" to create one
 and copy / paste it over to Modular's config page. My Habits gets information from the server every 30 minutes or when you relaunch the watchface. Due to this,
 it is possible that certain habits may not show if there are multiple habits within the 30 minute gap. </br></br>
+
+<b>Travel Priority Access</b></br>
+Travel Priority Access is a third party app by Ronny Carr. It's an awesome way for you to see your next flight if you travel frequently.
+If your flight is over 10 hours away, it will show you the date and flight information for your destination. When you're within 10 hours of your flight, it
+will show you helpful information such as the flight number, time, delays, terminal and gate. After the flight time has passed, it will show you your arrival
+information including the as estimated time of arrival, delays, terminal and gate so you know where you are when you land.<br>
+To find your API Token for Travel, open up the Travel App settings. Under the "Prereferences" tab, you will find a section called, "Priority Access". Copy the Travel ID and
+paste it into the text field in the Modular settings and you'll be good to go! Travel Priority Access gets information from the server every 30 minutes or when you relaunch the watchface.
 
 </div></fieldset></br>
 
@@ -162,7 +181,7 @@ Developing a watchface, especially something like Modular, takes a lot of time a
 <table width="100%" border="1" align="center">
 <tr>
 <td width="100%" valign="top" style="text-align:center">
-<small>Last updated: July 2, 2016</small>
+<small>Last updated: July 10, 2016</small>
 </td>
 </tr>
 </table>
